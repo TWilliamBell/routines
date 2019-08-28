@@ -15,7 +15,8 @@ directory <- getwd() ## Choose where to set up the routines
 newRoutineRecord(directory) ## Creates two new files recording your routines and when you've completed them
 
 showRoutines(directory) ## See default routines
-addRoutines("Exercising in the morning", "Morning routine", directory) ## Add a new routine and a description for it
+addRoutines("Exercising in the morning", "Morning routine", directory) ## Add a new routine 
+## and a description for it
 showRoutines(directory) ## See that it has been added to your routine
 
 routinesRecorded(directory) ## See what routines you've already completed
@@ -27,7 +28,8 @@ routinesNotCompleted(directory) ## See what you haven't done yet of your daily r
 finishRoutines(completed = F, directory = directory) ## Put your remaining routines as incomplete
 routinesRecorded(directory) ## See this addition
 
-showKindOfRoutine("Morning", directory, exactMatching = F) ## See which routines include the morning in their description
+showKindOfRoutine("Morning", directory, exactMatching = F) ## See which routines include the 
+## morning in their description
 
 removeRoutines("Eating breakfast", directory) ## Remove one routine from your list of routines
 showRoutines(directory) ## See that it has been removed
