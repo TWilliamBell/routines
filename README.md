@@ -8,26 +8,25 @@ The basic idea can be illustrated with an R script (more explanation to come):
 ```
 library(routines)
 
-directory <- getwd()
+directory <- getwd() ## Choose where to set up the routines
+ 
+newRoutineRecord(directory) ## Creates two new files recording your routines and when you've completed them
 
-dir.create(directory)
-newRoutineRecord(directory)
+showRoutines(directory) ## See default routines
+addRoutines("Exercising in the morning", "Morning routine", directory) ## Add a new routine and a description for it
+showRoutines(directory) ## See that it has been added to your routine
 
-showRoutines(directory)
-addRoutines("Exercising in the morning", "Morning routine", directory)
-showRoutines(directory)
+routinesRecorded(directory) ## See what routines you've already completed
+recordRoutines("Eating breakfast", directory) ## Add that you've completed one of your routines
+routinesRecorded(directory) ## See that it has been added
 
-routinesRecorded(directory)
-recordRoutines("Eating breakfast", directory)
-routinesRecorded(directory)
+routinesNotCompleted(directory) ## See what you haven't done yet of your daily routines
 
-routinesNotCompleted(directory)
+finishRoutines(completed = F, directory = directory) ## Put your remaining routines as incomplete
+routinesRecorded(directory) ## See this addition
 
-finishRoutines(directory = directory)
-routinesRecorded(directory)
+showKindOfRoutine("Morning", directory, exactMatching = F) ## See which routines include the morning in their description
 
-showKindOfRoutine("Morning", directory, exactMatching = F)
-
-removeRoutines("Eating breakfast", directory)
-showRoutines(directory)
+removeRoutines("Eating breakfast", directory) ## Remove one routine from your list of routines
+showRoutines(directory) ## See that it has been removed
 ```
