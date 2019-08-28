@@ -5,7 +5,7 @@ The basic idea of the package is that you have some set of tasks that need to be
 
 The basic idea can be illustrated with an R script (more explanation to come):
 
-```{r}
+```
 library(routines)
 
 direct <- "~/Desktop/routines"
