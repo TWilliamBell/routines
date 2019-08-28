@@ -8,26 +8,26 @@ The basic idea can be illustrated with an R script (more explanation to come):
 ```
 library(routines)
 
-direct <- "~/Desktop/routines"
+directory <- getwd()
 
-dir.create(direct)
-newRoutineRecord(direct)
+dir.create(directory)
+newRoutineRecord(directory)
 
-showRoutines(direct)
-addRoutines("Exercising in the morning", "Morning routine", direct)
-showRoutines(direct)
+showRoutines(directory)
+addRoutines("Exercising in the morning", "Morning routine", directory)
+showRoutines(directory)
 
-routinesRecorded(direct)
-recordRoutines("Eating breakfast", direct)
-routinesRecorded(direct)
+routinesRecorded(directory)
+recordRoutines("Eating breakfast", directory)
+routinesRecorded(directory)
 
-routinesNotCompleted(direct)
+routinesNotCompleted(directory)
 
-finishRoutines(directory = direct)
-routinesRecorded(direct)
+finishRoutines(directory = directory)
+routinesRecorded(directory)
 
-showKindOfRoutine("Morning", direct, exactMatching = F)
+showKindOfRoutine("Morning", directory, exactMatching = F)
 
-removeRoutines("Eating breakfast", direct)
-showRoutines(direct)
+removeRoutines("Eating breakfast", directory)
+showRoutines(directory)
 ```
