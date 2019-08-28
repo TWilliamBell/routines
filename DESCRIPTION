@@ -1,0 +1,11 @@
+Package: routines
+Type: Package
+Title: A Daily Routine Logger
+Version: 1.0.0
+Author: T. William Bell
+Maintainer: T. William Bell <twilliambell97@gmail.com>
+Description: A way of logging daily routines and keeping a daily checklist.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
