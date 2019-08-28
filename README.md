@@ -6,6 +6,8 @@ The basic idea of the package is that you have some set of tasks that need to be
 The basic idea can be illustrated with an R script (more explanation to come):
 
 ```
+# install.packages("devtools")
+# devtools::install_github("TWilliamBell/routines")
 library(routines)
 
 directory <- getwd() ## Choose where to set up the routines
@@ -30,3 +32,5 @@ showKindOfRoutine("Morning", directory, exactMatching = F) ## See which routines
 removeRoutines("Eating breakfast", directory) ## Remove one routine from your list of routines
 showRoutines(directory) ## See that it has been removed
 ```
+
+
