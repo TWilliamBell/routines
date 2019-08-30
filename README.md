@@ -35,4 +35,4 @@ removeRoutines("Eating breakfast", directory) ## Remove one routine from your li
 showRoutines(directory) ## See that it has been removed
 ```
 
-
+Reproducing this package also teaches the basics of input/output for anyone wishing to learn this aspect of R.
