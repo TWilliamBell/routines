@@ -6,7 +6,7 @@
 
 removeRoutines <- function(routinesToRemove, directory = getwd()) {
   routinesDF <- showRoutines(directory)
-  routinesDF <- routinesDF[!routines$Routines %in% routinesToRemove, ]
+  routinesDF <- routinesDF[!routinesDF$Routines %in% routinesToRemove, ]
   write.csv(routinesDF, paste0(directory, "/routines.csv"),
             row.names = F)
 }
