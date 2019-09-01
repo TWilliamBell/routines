@@ -15,7 +15,9 @@ finishRoutines <- function(completed = T, directory = getwd()) {
   if (length(allRoutines) == 0) {
     return("All routines marked as complete for today already.")
   }
-  record <- data.frame("Time" = as.character(Sys.Date()), "Routine" = allRoutines, "Completed?" = completed)
+  record <- data.frame("Time" = as.character(Sys.Date()),
+                       "Routine" = allRoutines,
+                       "Completed?" = completed)
   write.csv(rbind(recordedRoutines, record),
             file = paste0(directory, "/routineRecord.csv"),
             row.names = F)
