@@ -6,5 +6,5 @@
 
 successRate <- function(directory = getwd()) {
   tabularResults <- table(routines::routinesRecorded(directory)$Completed)/length(na.omit(routines::routinesRecorded(directory)$Completed))
-  unname(tablularResults[names(tabularResults) == "TRUE"])
+  unname(tabularResults[names(tabularResults) == "TRUE"])
 }
