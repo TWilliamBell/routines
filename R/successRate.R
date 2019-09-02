@@ -5,5 +5,5 @@
 #' @export
 
 successRate <- function(directory = getwd()) {
-  unname((table(routines::routinesRecorded(directory)$Completed)/27)[2])
+  unname((table(routines::routinesRecorded(directory)$Completed)/length(routines::routinesRecorded(directory)$Completed))[2])
 }
