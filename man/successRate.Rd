@@ -4,7 +4,7 @@
 \alias{successRate}
 \title{What proportion of activities are true out of activities marked T/F?}
 \usage{
-successRate(directory = getwd())
+successRate(directory = getwd(), onlyCurrentRoutines = F, na.rm = T)
 }
 \description{
 Returns a single value which is the proportion of Trues among Trues and Falses.
