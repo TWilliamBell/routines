@@ -12,7 +12,7 @@
 
 tsRoutines <- function(directory = getwd(), plot = T, 
                        ylim = c(0, 1), cex = 0.1, xlab = "Time", 
-                       ylab = "Success Rate", ...) {
+                       ylab = "Success Rate", col = "black", ...) {
   results <- routinesRecorded(directory = directory)
   results[ , 1] <- as.Date(results[ , 1])
   results <- aggregate(results[ , 3], by = list(Time = results$Time), 
@@ -21,7 +21,7 @@ tsRoutines <- function(directory = getwd(), plot = T,
   if (isTRUE(plot)) {
     plot(results, cex = cex, xlab = xlab, ylab = ylab, 
          ylim = ylim, ...) +
-      lines(results)
+      lines(results, col = col)
   }
   return(results)
 }
